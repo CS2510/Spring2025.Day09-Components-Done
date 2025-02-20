@@ -1,9 +1,6 @@
 class ControllerGameObject extends GameObject {
-  constructor(name) {
-    super(name)
-  }
   start() {
-    this.addComponent(new ControllerComponent())
+    this.addComponent(new MainSceneController())
     super.start()
   }
 }

@@ -1,17 +1,6 @@
 class LevelNumberGameObject extends GameObject {
-
-  constructor(name) {
-    super(name)
-  }
   start() {
-    
-  }
-  update() {
-
-  }
-  draw() {
-    ctx.fillStyle = "black"
-    ctx.font = "30px Times New Roman"
-    ctx.fillText("Level: 1", 0, 20)
+    this.addComponent(new Text("black", "30px Times New Roman", "Level: 1"))
+    super.start()
   }
 }

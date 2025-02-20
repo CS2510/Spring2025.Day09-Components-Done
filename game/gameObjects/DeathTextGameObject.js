@@ -1,17 +1,6 @@
 class DeathTextGameObject extends GameObject{
-
   start(){
-
-  }
-
-  update(){
-
-  }
-  
-  draw(){
-    ctx.fillStyle = "red"
-      ctx.font = "30px Times New Roman"
-      ctx.fillText("You are dead.", 0, 20)
-
+    this.addComponent(new Text("red", "30px Times New Roman", "You are dead"))
+    super.start()
   }
 }

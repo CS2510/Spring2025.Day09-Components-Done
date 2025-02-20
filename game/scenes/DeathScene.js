@@ -1,22 +1,13 @@
 class DeathScene extends Scene {
 
   start() {
-    this.gameObjects.push(new DeathController())
-    this.gameObjects.push(new DeathTextGameObject())
+    this.addGameObject(new DeathController())
+    this.addGameObject(new DeathTextGameObject(), 0, 20)
 
-    for (let gameObject of this.gameObjects) {
-      gameObject.start()
-    }
-
-
+    super.start()
   }
-  update() {for (let gameObject of this.gameObjects) {
-      gameObject.update()
-    }
-  }
-  
+
   draw() {
-
     //Engine drawing code
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
@@ -27,8 +18,6 @@ class DeathScene extends Scene {
     ctx.rect(0, 0, canvas.width, canvas.height)
     ctx.fill()
 
-    for (let gameObject of this.gameObjects) {
-      gameObject.draw()
-    }
+    super.draw()
   }
 }
